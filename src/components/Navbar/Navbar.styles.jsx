@@ -9,9 +9,11 @@ export const Section = styled.div`
   -webkit-user-select: none;
   -o-user-select: none;
   user-select: none;
-`
+  margin: auto;
+  `
 
 export const Container = styled.div`
+  margin-left: -50px;
   padding: 10px 0px;
 `
 

@@ -10,9 +10,10 @@ export const Section = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-`
+  `
 
 export const Container = styled.div`
+  min-height: 100vh;
   height: fit-content;
   scroll-snap-align: center;
   width: 90vw;
@@ -22,15 +23,21 @@ export const Container = styled.div`
 `
 
 export const Filters = styled.div`
-  align-self: start;
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  align-content: flex-start;
+  padding-left: 70px;
   flex-wrap: wrap;
   margin-top: 40px;
   margin-left: 40px;
-  width: 600px;
+  padding-right: 40px;
+  width: 100%;
+  
+  @media (min-width: 320px) and (max-width: 480px) {
+    margin-left: 0px;
+  }
+  
+  @media (min-width: 481px) and (max-width: 768px) {
+    /* width: 40%; */
+  }
 `
 
 export const FilterButton = styled.button`
@@ -47,6 +54,7 @@ transition: all 0.2s ease-in;
   background: transparent;
   border: 3px solid ${props => props.theme.thirdColor};
   margin-left: 10px;
+  margin-bottom: 20px;
   
   &:active {
   color: ${props => props.theme.thirdColor};
