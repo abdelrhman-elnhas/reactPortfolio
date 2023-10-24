@@ -1,5 +1,14 @@
 import React , {useRef} from 'react'
 import {Section , Title , Desc , Container , LeftSide , Screen , ProjectImage , RightSide , BarGroup , Bar , Button , Update} from './Portfolio.syles';
+import { Link } from 'react-router-dom';
+
+
+const nodecoration = {
+  textDecoration: "none",
+  color: "inherit"
+}
+
+
 
 function Portfolio() {
 
@@ -33,7 +42,7 @@ function Portfolio() {
             {projects.map( (project , index) => <Bar key={index} onClick={() => { LinkHandler(index); }}>
             {project}</Bar> )}
           </BarGroup>
-          <Button>Explore More!</Button>
+          <Button><Link to="/projects" smooth style={nodecoration}>Explore More!</Link></Button>
         </RightSide>
       </Container>
       <Update>Last Update On Septemper 2023</Update>

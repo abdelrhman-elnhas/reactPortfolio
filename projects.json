@@ -1,0 +1,53 @@
+{
+  "projects":[
+    {
+      "id": 1,
+      "title": "CropCopter Website",
+      "category": "Web",
+      "image": "proj1",
+      "date": "June, 2022"
+    },
+    {
+      "id": 2,
+      "title": "All Traders UI/UX Design",
+      "category": "UI/UX",
+      "image": "proj2", 
+      "date": "June, 2022"
+    },
+    {
+      "id": 3,
+      "title": "Aldolphin Website",
+      "category": "Web",
+      "image": "proj3", 
+      "date": "June, 2022"
+    },
+    {
+      "id": 4,
+      "title": "Simple Steps Social Media Design",
+      "category": "Graphic Design",
+      "image": "proj4", 
+      "date": "June, 2022"
+    },
+    {
+      "id": 5,
+      "title": "Almonofey Website",
+      "category": "Web",
+      "image": "proj5", 
+      "date": "June, 2022"
+    },
+    {
+      "id": 6,
+      "title": "Enchante Website",
+      "category": "Web",
+      "image": "proj6" ,
+      "date": "June, 2022"
+    },
+    {
+      "id": 7,
+      "title": "Nile ICT UI/UX Design",
+      "category": "UI/UX",
+      "image": "proj7" ,
+      "date": "June, 2022"
+    }
+  ]
+}

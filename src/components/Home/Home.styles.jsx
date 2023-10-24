@@ -2,17 +2,15 @@ import { styled } from 'styled-components';
 
 
 export const Section = styled.div`
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 20px;
+
 `
 
 export const Container = styled.div`
   height: 100%;
   scroll-snap-align: center;
-  width: 1400px;
+  /* width: 1400px; */
+  padding: 0px 80px;
+  flex-wrap: wrap;
   display: flex;
   justify-content: space-around;
 
@@ -25,7 +23,7 @@ export const LeftSide = styled.div`
   justify-content: center;
   align-self: flex-start;
   margin-top: 100px;
-  padding-left: 150px;
+  padding-left: 50px;
   -moz-user-select: -moz-none;
   -khtml-user-select: none;
   -webkit-user-select: none;
@@ -220,6 +218,7 @@ export const RightSide = styled.div`
   position: relative;
   flex: 3;
   padding-bottom: 20px;
+  
 
 `
 

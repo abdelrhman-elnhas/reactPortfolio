@@ -8,6 +8,9 @@ export const Section = styled.div`
   -webkit-user-select: none;
   -o-user-select: none;
   user-select: none;
+  position: static;
+  bottom: 0;
+  left: 0;
 `
 
 export const Container = styled.div`

@@ -3,7 +3,7 @@ import { styled } from "styled-components";
 
 
 export const Section = styled.div`
-  height: 100vh;
+  /* height: 100vh; */
   margin-bottom: 50px;
   -moz-user-select: -moz-none;
   -khtml-user-select: none;
@@ -17,6 +17,7 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
+  flex-wrap: wrap;
 `
 
 export const LeftSide = styled.div`
