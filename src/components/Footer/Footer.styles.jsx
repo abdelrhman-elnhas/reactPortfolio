@@ -2,30 +2,27 @@ import { styled } from "styled-components";
 
 
 export const Section = styled.div`
-  scroll-snap-align: center;
+  display: flex;
+  justify-content: center;
   -moz-user-select: -moz-none;
   -khtml-user-select: none;
   -webkit-user-select: none;
   -o-user-select: none;
   user-select: none;
+  background-color: ${props => props.theme.thirdColor};
+  border-top: solid 7px #701818;
   position: static;
   bottom: 0;
   left: 0;
 `
 
 export const Container = styled.div`
-  width: 100vw;
+  width: 100%;
+  max-width: 1024px;
   display: flex;
-  /* padding: 10px 70px 10px 70px; */
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: ${props => props.theme.thirdColor};
-  border-top: solid 7px #701818;
-
-  @media (min-width: 320px) and (max-width: 480px) {
-    /* padding: 0px 20px; */
-  }
 `
 export const Text = styled.p`
   color: ${props => props.theme.secColor};
@@ -33,9 +30,11 @@ export const Text = styled.p`
   @media (min-width: 320px) and (max-width: 480px) {
     font-size: 18px;
 }
-  @media (max-width: 320px) {
+  @media (max-width: 365px) {
     font-size: 14px;
+    /* margin-bottom: 2px; */
 }
+
 
 `
 
@@ -45,7 +44,7 @@ export const Name = styled.span`
   @media (min-width: 320px) and (max-width: 480px) {
     font-size: 18px;
   }
-  @media (max-width: 320px) {
+  @media (max-width: 365px) {
     font-size: 14px;
   }
   `

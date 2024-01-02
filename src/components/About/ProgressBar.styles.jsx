@@ -12,7 +12,7 @@ export const Label = styled.label`
   font-size: 17px;
   color: ${props => props.theme.thirdColor};
   margin-bottom: 12px;
-
+  display: block;
 `
 
 export const Bar = styled.div`

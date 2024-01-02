@@ -1,4 +1,4 @@
-import React , {useRef} from 'react'
+import React , {useEffect, useRef, useState} from 'react'
 import {Section , Title , Desc , Container , LeftSide , Screen , ProjectImage , RightSide , BarGroup , Bar , Button , Update} from './Portfolio.syles';
 import { Link } from 'react-router-dom';
 
@@ -10,44 +10,48 @@ const nodecoration = {
 
 
 
-function Portfolio() {
-
-  var projects = ["CropCopter Website" ,
-                  "Almonofey Website" ,
-                  "Enchante Website" ,
-                  "ElDolphin Website" ,
-                  "All Traders Ui/UX Design" ,
-                  "Nile ICT Ui/UX Design" ,
-                  "Simple Steps Designs"];
+const Portfolio = React.forwardRef((props, portfolioref) => {
   
   let projectImage = useRef();
   
-  const LinkHandler = (index) => {
-    projectImage.current.src = `./images/Proj${index+1}.jpg`;
+  const LinkHandler = (image) => {
+    projectImage.current.src = `./images/${image}.jpg`;
   }
 
+  const[projects , setProjects] = useState([]);
+
+  const url = 'https://cropcopter.net/api/get/all';
+
+  useEffect(() => {
+    fetch(url).then((res)=> res.json()).then((data) => {
+      setProjects(data);
+    })
+  }, [])
+  
+  const limitedData = projects.slice(0,7);
 
   return (
-    <Section id='portfolio'>
-      <Title>&lt; Portfolio &gt;</Title>
-      <Desc>These Are Some Projects I've Worked On..</Desc>
+    <Section id='portfolio' ref={portfolioref}>
       <Container>
         <LeftSide>
+          <Title>&lt; Portfolio &gt;</Title>
+          <Desc>These Are Some Projects I've Worked On..</Desc>
           <Screen>
-            <ProjectImage ref={projectImage} src='./images/Proj1.jpg' />
+            <ProjectImage ref={projectImage} src={`./images/Proj27.jpg`} />
           </Screen>
         </LeftSide>
         <RightSide>
           <BarGroup>
-            {projects.map( (project , index) => <Bar key={index} onClick={() => { LinkHandler(index); }}>
-            {project}</Bar> )}
+            {
+            limitedData.map( (project , index) => <Bar key={index} onClick={() => { LinkHandler(project.image) }}>
+            {project.title}</Bar> )}
+            <Button><Link to="/projects" smooth style={nodecoration}>Explore More!</Link></Button>
           </BarGroup>
-          <Button><Link to="/projects" smooth style={nodecoration}>Explore More!</Link></Button>
         </RightSide>
       </Container>
-      <Update>Last Update On Septemper 2023</Update>
+      <Update>Last Update On December 2023</Update>
     </Section>
   )
-}
+});
 
 export default Portfolio

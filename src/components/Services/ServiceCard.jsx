@@ -1,18 +1,19 @@
-import React from 'react';
-import {Container , Row , LogoBlock , Logo , Title , Content} from './ServiceCard.styles';
+import {Container , Row , LogoBlock , Logo , Title , Content , Card} from './ServiceCard.styles';
 
 
 
 function ServiceCard(props) {
   return (
     <Container>
-      <Row>
-        <LogoBlock>
-          <Logo src={props.image}/>
-        </LogoBlock>
-        <Title>{props.title}</Title>  
-      </Row>
-      <Content>{props.content}</Content>
+      <Card>
+        <Row>
+          <LogoBlock>
+            <Logo src={props.image}/>
+          </LogoBlock>
+          <Title>{props.title}</Title>  
+        </Row>
+        <Content>{props.content}</Content>
+      </Card>
     </Container>
   )
 }

@@ -1,19 +1,18 @@
-import React from 'react'
 import ProgressBar from './ProgressBar';
-import {Section , Container , LeftSide , Title , Desc , Name , RightSide } from './About.styles';
+import {Section , Container , AboutContent , Title , Desc , Name , AboutBars } from './About.styles';
 
 
 function About() {
   return (
     <Section id='about'> 
       <Container>
-        <LeftSide>
+        <AboutContent>
           <Title>
             &lt; About &gt;
           </Title>
           <Desc><Name>Hi There! I'm Abdelrhman Elnhas.</Name> I'm an Electrical Engineering Student, Majoring in computers and control systems. I have passion for all things that fall under the scope of technology, programming and design. In addition to my love of technology and design , I'm also interested in languages. Here you can see some of my skills.</Desc>
-        </LeftSide>
-        <RightSide>
+        </AboutContent>
+        <AboutBars>
           <ProgressBar skill="HTML" rate="90%"/>
           <ProgressBar skill="CSS" rate="85%"/>
           <ProgressBar skill="Javascript" rate="75%"/>
@@ -27,7 +26,7 @@ function About() {
           <ProgressBar skill="Illustrator" rate="80%"/>
           <ProgressBar skill="XD" rate="80%"/>
           <ProgressBar skill="Figma" rate="60%"/>
-        </RightSide>
+        </AboutBars>
       </Container>
     </Section>
   )

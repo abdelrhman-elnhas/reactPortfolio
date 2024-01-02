@@ -1,10 +1,10 @@
-import React , {useRef, useState} from 'react'
+import React , {useRef , useState} from 'react'
 import emailjs from '@emailjs/browser';
 import {Section , Container , Title , Desc, Form , Input , TextArea , Button , Notification} from "./Contact.styles";
 
 
 
-function Contact() {
+const Contact = React.forwardRef((props, contactref) => {
 
   const ref = useRef();
   const [success , setSuccess] = useState(null);
@@ -32,7 +32,7 @@ function Contact() {
     };
   
   return (
-    <Section id='contact'>
+    <Section id='contact' ref={contactref}>
       <Container>
           <Title>&lt; Contact Us &gt;</Title>
           <Desc>Any Questions or Remarks? Just write me a message</Desc>
@@ -46,7 +46,7 @@ function Contact() {
           </Form> 
       </Container>
     </Section>
-  )
-}
+  );
+});
 
-export default Contact
+export default Contact;

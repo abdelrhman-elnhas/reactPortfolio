@@ -1,4 +1,3 @@
-import React from 'react';
 import {Section , Container , Text , Name , Copyright , Logo} from './Footer.styles';
 
 function Footer() {

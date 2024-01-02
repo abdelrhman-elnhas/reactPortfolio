@@ -13,3 +13,7 @@ body {
   font-family: "Bebas Neue";
   letter-spacing: 1.5px;
 }
+
+a {
+  text-decoration: none;
+}

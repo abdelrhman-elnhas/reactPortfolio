@@ -2,8 +2,8 @@ import { styled } from "styled-components";
 
 
 export const Section = styled.div`
-  height: 100vh;
-  scroll-snap-align: center;
+  display: flex;
+  justify-content: center;
   -moz-user-select: -moz-none;
   -khtml-user-select: none;
   -webkit-user-select: none;
@@ -12,17 +12,19 @@ export const Section = styled.div`
 `
 
 export const Container = styled.div`
-  height: 100%;
-  width: 90vw;
+  width: 100%;
+  max-width: 1024px;
+  min-height: 100vh;
+  padding: 0px 30px;
   display: flex;
-  padding: 0px 70px;
   flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
+
 `
 
 export const Form = styled.form`
-  margin-top: 20px;
+  margin-top: -80px;
   width: 400px;
   display: flex;
   flex-direction: column;
@@ -35,12 +37,20 @@ export const Form = styled.form`
 export const Title = styled.p`
   font-size: 50px;
   color: ${props => props.theme.thirdColor};
-  margin-bottom: -20px;
+  margin-bottom: -80px;
+  @media (max-width: 414px) {
+    margin-bottom: -100px;
+  }
 
 `
 export const Desc = styled.p`
   font-size: 15px;
   color: ${props => props.theme.thirdColor};
+  @media (max-width: 414px) {
+    font-size: 11px;
+    /* margin-top: -50px; */
+    margin-bottom: 10px;
+  }
 `
 
 export const Input = styled.input`
@@ -147,4 +157,5 @@ export const Notification = styled.p`
   color: ${props => props.theme.thirdColor};
   padding: 10px;
   text-align: center;
+
 `

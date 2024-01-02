@@ -16,14 +16,13 @@ export const Card = styled.div`
   border-radius: 15px;
   width: 30%;
   margin: 10px 0px;
-
-
-  @media (min-width: 320px) and (max-width: 480px) {
-    width: 100%;
-  }
+  cursor: pointer;
   
-  @media (min-width: 481px) and (max-width: 768px) {
-    width: 40%;
+  @media (max-width: 768px) {
+    width: 45%;
+  }
+  @media (max-width: 676px) {
+    width: 90%;
   }
 
   &:hover{
@@ -76,7 +75,11 @@ export const Title = styled.p`
     padding: 0 0 0 10px;
   }
 
-  `
+  @media (min-width: 676px) and (max-width: 1147px) {
+    font-size: 16px;    
+  }
+
+`
 
 export const Date = styled.p`
   font-size: 12px;

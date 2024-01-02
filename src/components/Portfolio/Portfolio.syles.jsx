@@ -1,63 +1,103 @@
 import { styled } from "styled-components";
 
 export const Section = styled.div`
-  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   -moz-user-select: -moz-none;
   -khtml-user-select: none;
   -webkit-user-select: none;
   -o-user-select: none;
   user-select: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 `
 
 export const Container = styled.div`
-  height: 100%;
-  scroll-snap-align: center;
-  width: 90vw;
+  width: 100%;
+  max-width: 1024px;
+  min-height: 100vh;
+  padding: 0 30px;
   display: flex;
-  padding: 0px 70px;
-  flex-direction: row;
+  justify-content: center;
   align-items: center;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 `
+
 
 export const Title = styled.p`
   font-size: 50px;
   color: ${props => props.theme.thirdColor};
   margin-bottom: -20px;
+
+  @media (max-width: 850px) {
+    font-size: 45px;
+  }
+
 `
 
 export const Desc = styled.p`
   font-size: 35px;
   color: ${props => props.theme.thirdColor};
+  @media (max-width: 965px) {
+    font-size: 30px;
+  }
+  @media (max-width: 850px) {
+    font-size: 25px;
+  }
 `
 
 export const LeftSide = styled.div`
   flex: 3;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
   align-self: flex-start;
+  
+  @media (max-width: 1095px) {
+    padding-left: 30px;
+  }
+  @media (max-width: 768px) {
+    flex: unset;
+    padding-left: 65px;
+  }
+  @media (max-width:598px) {
+    padding-left: 50px;
+  }
+  @media (max-width:498px) {
+    padding-left: 40px;
+    margin-bottom: -40px;
+  }
 `
 
 export const RightSide = styled.div`
   flex: 2;
+  padding-top: 80px;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
   gap: 30px;
+  
+  @media (max-width: 1095px) {
+    padding-right: 30px;
+  } 
+  @media (max-width: 768px) {
+    flex: unset;
+    width: 80%;
+  }
+
 `
 
 export const Screen = styled.div`
   background-color: ${props => props.theme.thirdColor};
-  border-radius: 30px;
+  border-radius: 20px;
   -webkit-border-radius: 30px;
   -moz-border-radius: 30px;
   -ms-border-radius: 30px;
-  width: 80%;
+  width: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -79,7 +119,8 @@ export const BarGroup = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 70%;
+  width: 90%;
+  
 `
 
 export const Bar = styled.span`
@@ -88,8 +129,10 @@ export const Bar = styled.span`
   content: "";
   background-color: ${ props => props.theme.mainColor};
   width: 100%;
-  display: inline-block;
   height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: ${ props => props.theme.thirdColor};
   border-radius: 50px;
   -webkit-border-radius: 50px;
@@ -107,8 +150,6 @@ export const Bar = styled.span`
   &:hover{
     font-size: 1.2rem;  
     content: "";
-    display: inline-block;
-    /* width: 70%; */
     background-color: ${ props => props.theme.thirdColor};
     color: ${ props => props.theme.mainColor};
     border-radius: 50px;
@@ -116,7 +157,6 @@ export const Bar = styled.span`
     -moz-border-radius: 50px;
     -ms-border-radius: 50px;
     -o-border-radius: 50px;
-    margin-bottom: 15px;
     color: ${ props => props.theme.mainColor};
   }
 `
@@ -136,7 +176,7 @@ export const Button = styled.button`
   background: ${props => props.theme.mainColor};
   border: 3px solid ${props => props.theme.thirdColor};
   align-self: center;
-  margin-left: 160px;
+  margin-top: 25px;
   
   &:active {
   color: ${props => props.theme.thirdColor};

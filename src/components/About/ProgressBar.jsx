@@ -1,4 +1,3 @@
-import React from 'react'
 import { useInView } from 'react-intersection-observer';
 import {Container , Label , Bar , Value , ProgBar} from "./ProgressBar.styles"
 

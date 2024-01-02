@@ -1,34 +1,29 @@
-import React , {useEffect, useRef, useState}   from 'react'
+import {useEffect, useState}   from 'react'
 import {Section , Container , Filters , FilterButton , ProjectsSection} from "./Projects.styles"
 import ProjectCard from './ProjectCard';
-import { Value } from './../About/ProgressBar.styles';
 
 function Projects() {
 
   const [projects , setProjects] = useState([]);
-  const categories = ["Web" , "UI/UX" , "Graphic Design"];
+  const categories = ['Web' , 'UI-UX' , 'Graphic Design'];
   
-
-  function getAllProjects(){
-      fetch('https://abdelrhman-elnhas.github.io/off/projects.json').then((res)=> res.json()).then((data) => {
-        setProjects(data['projects']);
-        // console.log(data['projects']);
-      });
+  // Function to fetch All Projects
+  async function getAllProjects(){
+    await fetch('https://cropcopter.net/api/get/all').then((res)=> res.json()).then((data) => {
+        setProjects(data);
+      }).catch(err => console.error(err));
+  }
+  // Function fetches projects by category
+  function getProjectByCategory(category){
+    fetch(`https://cropcopter.net/api/get/${category}`).then((res)=> res.json()).then((data) => {
+      setProjects(data.filter(project =>
+        project.category === `${category}`
+        ));
+    }).catch(err => console.error(err));
   }
 
-
-  function getProjectByCategory(cat){
-    fetch(`https://abdelrhman-elnhas.github.io/off/projects.json`).then((res)=> res.json()).then((data) => {
-      setProjects(projects.filter(project =>
-        project.category === `${cat}`
-      ));
-      console.log(projects);
-
-    });
-  }
-  
   useEffect(() => {
-    getAllProjects();
+      getAllProjects();
   }, [])
 
   return (
@@ -38,21 +33,19 @@ function Projects() {
         <FilterButton onClick={() => {getAllProjects();}}>All</FilterButton>
         {categories.map((cat) => {
           return(
-            <FilterButton key={cat} onClick={() => {getProjectByCategory(cat);}}>{cat} Projects</FilterButton>
+            <FilterButton className='' key={cat} onClick={() => {getProjectByCategory(cat);}}>{cat === 'UI-UX' ? 'UI/UX' : cat} Projects</FilterButton>
           )
         })}
-        </Filters>
-        <ProjectsSection>
-          {
-            // <ProjectCard>{projects.values}</ProjectCard>
-            projects.map((project) => {
-              return(
-                <ProjectCard key={project.id} title={project.title} image={project.image} category={project.category} date={project.date}></ProjectCard>
+      </Filters>
+      <ProjectsSection>
+        {
+          projects.map((project) => {
+            return(
+              <ProjectCard key={project.id} title={project.title} image={project.image} category={project.category} date={project.date} url={ project.url}></ProjectCard>
               )
             })
           }
-
-        </ProjectsSection>
+      </ProjectsSection>
       </Container>
     </Section>
   )

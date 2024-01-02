@@ -1,33 +1,61 @@
 import { styled } from 'styled-components';
 
-export const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+export const Section = styled.div`
   background-image: url('./images/mini.png');
-  width: 102%;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 60px 0px;
+  display: flex;
+  justify-content: center;
   -moz-user-select: -moz-none;
   -khtml-user-select: none;
   -webkit-user-select: none;
   -o-user-select: none;
   user-select: none;
   margin-bottom: 50px;
+`
 
+export const Container = styled.div`
+  width: 100%;
+  max-width: 1024px;
+  padding: 0 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+  text-align: center;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  user-select: none;
 `
 
 export const Title = styled.p`
   font-size: 40px;
   color: ${props => props.theme.thirdColor};
   margin-bottom: -5px;
-`
+
+  @media (max-width: 768px) {
+    font-size: 30px;
+  }
+
+  @media (max-width: 424px) {
+    font-size: 25px;
+  }
+  `
 
 export const Desc = styled.p`
   font-size: 30px;
   color: ${props => props.theme.thirdColor};
+
+  @media (max-width: 768px) {
+    font-size: 20px;
+  }
+
+  @media (max-width: 424px) {
+    font-size: 16px;
+  }
 `
 
 export const ButtonGroup = styled.div`
@@ -49,6 +77,10 @@ export const Button = styled.button`
   border-radius: 10px;
   background: ${props => props.theme.thirdColor};
   border: 3px solid ${props => props.theme.mainColor};
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
 
   &:active {
   color: ${props => props.theme.mainColor};

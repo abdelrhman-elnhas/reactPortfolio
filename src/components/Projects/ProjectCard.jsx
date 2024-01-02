@@ -1,11 +1,10 @@
-import React from 'react';
-import {Card , Thumb , Tag , ProjectImage , Badge , Title , Date} from './ProjectCard.styles';
+import {Card , Thumb , Tag , ProjectImage , Title , Date} from './ProjectCard.styles';
 
-function ProjectCard({title , image , category , date}) {
+function ProjectCard({title , image , category , date , url} ) {
   return (
-    <Card>
+    <Card onClick={() =>{ window.open(url , '_blank')}}>
       <Thumb>
-        <Tag>{category}</Tag>
+        <Tag>{category === 'UI-UX' ? 'UI/UX' : category}</Tag>
         <ProjectImage src={`./images/${image}.jpg`}/>
       </Thumb>
       <Title>{title}</Title>

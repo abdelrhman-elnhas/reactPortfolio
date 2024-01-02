@@ -2,34 +2,46 @@ import { styled } from 'styled-components';
 
 
 export const Section = styled.div`
-
-`
-
-export const Container = styled.div`
-  height: 100%;
-  scroll-snap-align: center;
-  /* width: 1400px; */
-  padding: 0px 80px;
-  flex-wrap: wrap;
   display: flex;
-  justify-content: space-around;
-
-`
-
-export const LeftSide = styled.div`
-  flex: 3;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-self: flex-start;
-  margin-top: 100px;
-  padding-left: 50px;
   -moz-user-select: -moz-none;
   -khtml-user-select: none;
   -webkit-user-select: none;
   -o-user-select: none;
   user-select: none;
+  position: relative;
+`
 
+export const Container = styled.div`
+  width: 100%;
+  max-width: 1024px;
+  min-height: calc(100vh - 98px);
+  padding: 0 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: start;
+  flex-wrap: wrap;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
+`
+
+export const HeroContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 0px 20px ;
+
+  @media (max-width: 1155px) {
+    padding: 0px 0px 0px 50px ;
+  }
+
+  @media (max-width: 424px) {
+    justify-content: center;
+  }
 `
 
 export const Hello = styled.p`
@@ -46,6 +58,26 @@ export const Hello = styled.p`
   height: 70px;
   margin-top: 14px;
   margin-left: -20px;
+
+    @media (max-width: 996px) {
+      height: 52px;
+      margin-top: 10px;
+    }
+
+    @media (max-width: 424px) {
+      height: 45px;
+      margin-top: 7px;
+    }
+  }
+
+  @media (max-width: 996px) {
+    font-size: 40px;
+    margin-bottom: -40px;
+  }
+
+  @media (max-width: 424px) {
+    font-size: 30px;
+    margin-bottom: -30px;
   }
 `
 
@@ -55,6 +87,16 @@ export const Name = styled.p`
   color: ${props => props.theme.fourthColor};
   position: relative;
 
+  @media (max-width: 996px) {
+    font-size: 40px;
+    margin-bottom: 0px;
+  }
+
+  @media (max-width: 424px) {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+
   &::before {
   content: "";
   position: absolute;
@@ -63,7 +105,17 @@ export const Name = styled.p`
   height: 70px;
   margin-top: 30px;
   margin-left: -20px;
+
+    @media (max-width: 996px) {
+      height: 52px;
+      margin-top: 25px;
+    }
+    @media (max-width: 424px) {
+      height: 45px;
+      margin-top: 20px;
+    }
   }
+
 `
 
 export const Titles = styled.p`
@@ -71,7 +123,17 @@ export const Titles = styled.p`
   letter-spacing: 0.8px;
   color: ${props => props.theme.thirdColor};
 
+  @media (max-width: 996px) {
+    font-size: 14px;
+    letter-spacing: 0.6px;
+    margin-top: 8px;
+  }
 
+  @media (max-width: 424px) {
+    font-size: 12px;
+    letter-spacing: 0.4px;
+    margin-top: 4px;
+  }
 
 `
 
@@ -94,6 +156,16 @@ export const ButtonMain = styled.button`
   border-radius: 50px;
   background: ${props => props.theme.mainColor};
   border: 3px solid ${props => props.theme.thirdColor};
+
+  @media (max-width: 996px) {
+    font-size: 16px;
+    padding: 0.7em 1.5em;
+  }
+
+  @media (max-width: 424px) {
+    font-size: 12px;
+    padding: 0.7em 1.5em;
+  }
 
   &:active {
   color: ${props => props.theme.thirdColor};
@@ -143,9 +215,6 @@ export const ButtonMain = styled.button`
     background-color: ${props => props.theme.thirdColor};
     transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
   }
-
-
-
 `
 
 export const ButtonSec = styled.button`
@@ -161,6 +230,16 @@ export const ButtonSec = styled.button`
   border-radius: 50px;
   background: ${props => props.theme.thirdColor};
   border: 3px solid ${props => props.theme.mainColor};
+
+  @media (max-width: 996px) {
+    font-size: 16px;
+    padding: 0.7em 1.5em;
+  }
+
+  @media (max-width: 424px) {
+    font-size: 12px;
+    padding: 0.7em 1.5em;
+  }
 
   &:active {
   color: ${props => props.theme.mainColor};
@@ -210,29 +289,94 @@ export const ButtonSec = styled.button`
     background-color: ${props => props.theme.mainColor};
     transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
   }
-
-
 `
 
-export const RightSide = styled.div`
-  position: relative;
-  flex: 3;
-  padding-bottom: 20px;
+
+
+export const HeroImage = styled.div`
+  flex: 1;
+  padding: 0 20px;
+  display: flex;
+  justify-content: end;
   
+  @media (max-width: 768px) {
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  @media (max-width: 424px) {
+    align-items: flex-start;
+    flex: 2;
+  }
 
 `
-
 export const Photo = styled.img`
-  height: 420px;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  margin: auto;
+  width: 100%;
   -moz-user-select: -moz-none;
   -khtml-user-select: none;
   -webkit-user-select: none;
   -o-user-select: none;
   user-select: none;
+  transition: all 0.3s ease-in-out;
+
+  @media (max-width: 768px) {
+    width: 90%;
+    object-fit: contain;
+  }
+
+  @media (max-width: 424px) {
+    width: 100%;
+    object-fit: contain;
+  }
+
+
+  &:hover{
+    scale: 1.01;
+  } 
+`
+
+
+export const SocialMedia = styled.div`
+  position: absolute;
+  top: 50%;
+  left: -20px;
+  transform: translateY(-50%);
+  background-color: ${props => props.theme.thirdColor};
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  width: 30px;
+  align-items: end;
+  padding: 20px 10px 20px 20px;
+`
+
+export const List = styled.div`
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+
+
+  @media (max-width: 768px) {
+
+  }
+`
+
+export const ListItem = styled.div`
+  cursor: pointer;
+  transition: all 0.1s linear;
+
+  &:hover{
+    scale: 1.2;
+  }
+
+`
+
+export const Anchor = styled.a`
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  color: ${props => props.theme.mainColor} !important;
 `
