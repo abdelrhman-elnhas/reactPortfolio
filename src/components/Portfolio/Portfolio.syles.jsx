@@ -15,11 +15,12 @@ export const Section = styled.div`
 export const Container = styled.div`
   width: 100%;
   max-width: 1024px;
-  min-height: 100vh;
+  /* min-height: 100vh; */
+  margin: 20px 0;
   padding: 0 30px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
 
   @media (max-width: 768px) {
     flex-direction: column;

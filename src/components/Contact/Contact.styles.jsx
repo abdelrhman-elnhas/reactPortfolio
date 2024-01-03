@@ -14,32 +14,22 @@ export const Section = styled.div`
 export const Container = styled.div`
   width: 100%;
   max-width: 1024px;
-  min-height: 100vh;
+  /* min-height: 100vh; */
+  margin: 80px 0;
   padding: 0px 30px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 
 `
 
-export const Form = styled.form`
-  margin-top: -80px;
-  width: 400px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-
-  @media only screen and (max-width: 768px) {
-    width: 300px;
-  }
-`
 export const Title = styled.p`
   font-size: 50px;
   color: ${props => props.theme.thirdColor};
-  margin-bottom: -80px;
+  margin-bottom: -20px;
   @media (max-width: 414px) {
-    margin-bottom: -100px;
+    margin-bottom: -10px;
   }
 
 `
@@ -48,8 +38,18 @@ export const Desc = styled.p`
   color: ${props => props.theme.thirdColor};
   @media (max-width: 414px) {
     font-size: 11px;
-    /* margin-top: -50px; */
     margin-bottom: 10px;
+  }
+`
+
+export const Form = styled.form`
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  @media only screen and (max-width: 768px) {
+    width: 300px;
   }
 `
 

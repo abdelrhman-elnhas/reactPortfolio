@@ -1,5 +1,5 @@
 import {Link} from 'react-router-dom';
-import CV from '../../Files/AbdelrhmanAhmedElnhasCV2023.pdf';
+import CV from '../../Files/AbdelrhmanAhmedElnhasCV2024.pdf';
 import {Section, Container , Title , Desc , ButtonGroup , Button} from './MidSection.styles';
 
 function MidSection() {

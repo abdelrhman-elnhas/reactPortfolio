@@ -14,7 +14,8 @@ export const Section = styled.div`
 export const Container = styled.div`
   width: 100%;
   max-width: 1024px;
-  min-height: 100vh;
+  /* min-height: 100vh;  */
+  margin-bottom: 80px;
   display: flex;
   padding: 40px 30px;
   flex-direction: column;
