@@ -1,6 +1,5 @@
 import { styled } from "styled-components";
 
-
 export const Card = styled.div`
   transition: 0.5s all;
   overflow: hidden;
@@ -10,14 +9,14 @@ export const Card = styled.div`
   -webkit-transition: 0.5s all;
   -o-transition: 0.5s all;
   transition: all 0.3s ease-in-out;
-  background-color: ${props => props.theme.thirdColor};
+  background-color: ${(props) => props.theme.thirdColor};
   -moz-transition: 0.5s all;
   -ms-transition: 0.5s all;
   border-radius: 15px;
   width: 30%;
   margin: 10px 0px;
   cursor: pointer;
-  
+
   @media (max-width: 768px) {
     width: 45%;
   }
@@ -25,30 +24,30 @@ export const Card = styled.div`
     width: 90%;
   }
 
-  &:hover{
+  &:hover {
     -webkit-transform: translateY(0);
     -ms-transform: translateY(0);
     transform: translateY(-10px);
   }
-`
+`;
 
 export const Thumb = styled.div`
   position: relative;
   overflow: hidden;
-`
+`;
 
 export const Tag = styled.span`
-  background: ${props => props.theme.mainColor};
+  background: ${(props) => props.theme.mainColor};
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-  color: ${props => props.theme.thirdColor};
+  color: ${(props) => props.theme.thirdColor};
   font-size: 14px;
   padding: 2px 8px;
   position: absolute;
   left: 20px;
   top: 0;
   z-index: 1;
-`
+`;
 
 export const ProjectImage = styled.img`
   -webkit-transform: scale(1);
@@ -58,44 +57,55 @@ export const ProjectImage = styled.img`
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   width: 100%;
-`
-
+`;
 
 export const Title = styled.p`
-  color: ${props => props.theme.mainColor};
+  color: ${(props) => props.theme.mainColor};
   padding: 0 0 0 20px;
   font-size: 18px;
   margin-bottom: -5px;
-  
+
   @media (min-width: 320px) and (max-width: 480px) {
-    padding: 0 0 0 10px;
+    padding: 0 10px 0 10px;
   }
-  
+
   @media (min-width: 481px) and (max-width: 768px) {
     padding: 0 0 0 10px;
   }
 
   @media (min-width: 676px) and (max-width: 1147px) {
-    font-size: 16px;    
+    padding: 0px 20px;
+    font-size: 16px;
   }
-
-`
+`;
 
 export const Date = styled.p`
   font-size: 12px;
-  color: ${props => props.theme.mainColor};
+  color: ${(props) => props.theme.mainColor};
   opacity: 0.6;
-  padding: 0 0 0 20px;
+  padding: 0 20px 0 20px;
 
-  &:after{
-  content: "";
-  background: ${props => props.theme.mainColor};
-  border-radius: 50%;
-  display: inline-block;
-  height: 3px;
-  margin-left: 0.6rem;
-  vertical-align: middle;
-  width: 3px;
+  @media (min-width: 320px) and (max-width: 480px) {
+    padding: 0 10px 0 10px;
   }
-  
-`
+
+  @media (min-width: 481px) and (max-width: 768px) {
+    padding: 0 0 0 10px;
+  }
+
+  @media (min-width: 676px) and (max-width: 1147px) {
+    padding: 0px 20px;
+    font-size: 16px;
+  }
+
+  &:after {
+    content: "";
+    background: ${(props) => props.theme.mainColor};
+    border-radius: 50%;
+    display: inline-block;
+    height: 3px;
+    margin-left: 0.6rem;
+    vertical-align: middle;
+    width: 3px;
+  }
+`;

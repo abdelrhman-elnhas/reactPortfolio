@@ -1,11 +1,13 @@
 import {useEffect, useState}   from 'react'
 import {Section , Container , Filters , FilterButton , ProjectsSection} from "./Projects.styles"
 import ProjectCard from './ProjectCard';
+import './projects.css';
 
 function Projects() {
 
   const [projects , setProjects] = useState([]);
-  const categories = ['Web' , 'UI-UX' , 'Graphic Design'];
+  const [activeTab , setActiveTab] = useState("");
+  const categories = ['All' , 'Web' , 'UI-UX' , 'Graphic Design'];
   
   // Function to fetch All Projects
   async function getAllProjects(){
@@ -30,10 +32,18 @@ function Projects() {
     <Section>
       <Container>
         <Filters>
-        <FilterButton onClick={() => {getAllProjects();}}>All</FilterButton>
+        {/* <FilterButton onClick={() => {getAllProjects();}}>All</FilterButton> */}
         {categories.map((cat) => {
           return(
-            <FilterButton className='' key={cat} onClick={() => {getProjectByCategory(cat);}}>{cat === 'UI-UX' ? 'UI/UX' : cat} Projects</FilterButton>
+            <FilterButton className={activeTab === cat && "activeCat"} key={cat} onClick={() => {
+              if (cat === "All" ){
+                setActiveTab(cat);
+                getAllProjects();
+              }else{
+                setActiveTab(cat);
+                getProjectByCategory(cat);
+              }
+            }}>{cat === 'UI-UX' ? 'UI/UX' : cat}{cat === "All" ? " " : " Projects"}</FilterButton>
           )
         })}
       </Filters>
