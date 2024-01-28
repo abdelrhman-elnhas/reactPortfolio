@@ -7,6 +7,9 @@ export const Section = styled.div`
   -o-user-select: none;
   user-select: none;
   padding: 0px 40px;
+  @media (max-width: 768px) {
+    padding: 0px 10px;
+  }
 `;
 
 export const Container = styled.div`
