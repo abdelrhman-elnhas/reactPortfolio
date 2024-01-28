@@ -6,10 +6,7 @@ export const Section = styled.div`
   -webkit-user-select: none;
   -o-user-select: none;
   user-select: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  padding: 0px 40px;
 `;
 
 export const Container = styled.div`
@@ -30,13 +27,13 @@ export const Filters = styled.div`
   margin-left: -20px;
 
   @media (min-width: 320px) and (max-width: 480px) {
-    margin-left: 85px;
-    /* margin-left: 0px; */
+    margin-left: 30px;
+    width: 83%;
   }
 
   @media (min-width: 481px) and (max-width: 768px) {
-    margin-left: 40px;
-    /* width: 40%; */
+    margin-left: -20px;
+    width: 85%;
   }
 `;
 
@@ -109,7 +106,7 @@ export const ProjectsSection = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
   width: calc(100% - 95px);
   gap: 15px;
