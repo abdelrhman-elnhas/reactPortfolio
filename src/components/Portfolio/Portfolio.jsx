@@ -48,7 +48,7 @@ const Portfolio = React.forwardRef((props, portfolioref) => {
           <Title>&lt; Portfolio &gt;</Title>
           <Desc>These Are Some Projects I've Worked On..</Desc>
           <Screen>
-            <ProjectImage ref={projectImage} src={`./images/Proj27.jpg`} />
+            <ProjectImage ref={projectImage} src={`./images/Proj35.jpg`} />
           </Screen>
         </LeftSide>
         <RightSide>

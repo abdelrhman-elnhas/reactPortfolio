@@ -1,19 +1,18 @@
-import { styled , keyframes } from "styled-components";
-
+import { styled, keyframes } from "styled-components";
 
 export const Container = styled.div`
-  display: flex;  
+  display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  
-`
+`;
 
 export const Label = styled.label`
   font-size: 17px;
-  color: ${props => props.theme.thirdColor};
-  margin-bottom: 12px;
+  color: ${(props) => props.theme.thirdColor};
+  margin-bottom: 18px;
+  margin-top: 1px;
   display: block;
-`
+`;
 
 export const Bar = styled.div`
   display: flex;
@@ -26,10 +25,9 @@ export const Bar = styled.div`
   -moz-border-radius: 20px;
   -ms-border-radius: 20px;
   -o-border-radius: 20px;
-  background-color: ${props => props.theme.thirdColor};
+  background-color: ${(props) => props.theme.thirdColor};
   margin-bottom: 7px;
-  `
-
+`;
 
 var fill = keyframes`
     0% {
@@ -41,7 +39,7 @@ var fill = keyframes`
 export const ProgBar = styled.div`
   content: "";
   align-self: flex-start;
-  background-color: ${props => props.theme.mainColor};
+  background-color: ${(props) => props.theme.mainColor};
   height: 100%;
   margin-right: 5px;
   width: 90%;
@@ -51,10 +49,9 @@ export const ProgBar = styled.div`
   -ms-border-radius: 20px;
   -o-border-radius: 20px;
   animation: ${fill} 3s linear both;
-`
+`;
 
 export const Value = styled.p`
-  color: ${props => props.theme.mainColor};
+  color: ${(props) => props.theme.mainColor};
   font-size: 1rem;
-`
-
+`;
