@@ -48,7 +48,7 @@ const Portfolio = React.forwardRef((props, portfolioref) => {
           <Title>&lt; Portfolio &gt;</Title>
           <Desc>These Are Some Projects I've Worked On..</Desc>
           <Screen>
-            <ProjectImage ref={projectImage} src={`./images/Proj35.jpg`} />
+            <ProjectImage ref={projectImage} src={`./images/Proj36.jpg`} />
           </Screen>
         </LeftSide>
         <RightSide>
@@ -71,7 +71,7 @@ const Portfolio = React.forwardRef((props, portfolioref) => {
           </BarGroup>
         </RightSide>
       </Container>
-      <Update>Last Update On January 2024</Update>
+      <Update>Last Update On February 2024</Update>
     </Section>
   );
 });
