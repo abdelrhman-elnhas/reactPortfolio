@@ -9,7 +9,6 @@ export const Container = styled.div`
 export const Label = styled.label`
   font-size: 17px;
   color: ${(props) => props.theme.thirdColor};
-  margin-bottom: 18px;
   margin-top: 1px;
   display: block;
 `;
@@ -17,8 +16,7 @@ export const Label = styled.label`
 export const Bar = styled.div`
   display: flex;
   align-items: center;
-  margin-top: -35px;
-  height: 10px;
+  height: 8px;
   padding: 4px;
   border-radius: 20px;
   -webkit-border-radius: 20px;
@@ -30,10 +28,10 @@ export const Bar = styled.div`
 `;
 
 var fill = keyframes`
-    0% {
-      opacity: 0.2;
-      width: 0; }
-    100% { opacity: 1;  }
+	0% {
+		opacity: 0.2;
+		width: 0; }
+	100% { opacity: 1;  }
 `;
 
 export const ProgBar = styled.div`
