@@ -155,7 +155,7 @@ export const ButtonMain = styled.button`
   border-radius: 50px;
   background: ${(props) => props.theme.mainColor};
   border: 3px solid ${(props) => props.theme.thirdColor};
-  cursor: pointer;
+  cursor: pointer !important;
 
   @media (max-width: 996px) {
     font-size: 16px;
@@ -230,7 +230,7 @@ export const ButtonSec = styled.button`
   border-radius: 50px;
   background: ${(props) => props.theme.thirdColor};
   border: 3px solid ${(props) => props.theme.mainColor};
-  cursor: pointer;
+  cursor: pointer !important;
 
   @media (max-width: 996px) {
     font-size: 16px;
