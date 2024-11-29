@@ -1,6 +1,12 @@
-import {Container , Row , LogoBlock , Logo , Title , Content , Card} from './ServiceCard.styles';
-
-
+import {
+  Container,
+  Row,
+  LogoBlock,
+  Logo,
+  Title,
+  Content,
+  Card,
+} from "./ServiceCard.styles";
 
 function ServiceCard(props) {
   return (
@@ -8,14 +14,14 @@ function ServiceCard(props) {
       <Card>
         <Row>
           <LogoBlock>
-            <Logo src={props.image}/>
+            <Logo src={props.image} alt={props.alt} />
           </LogoBlock>
-          <Title>{props.title}</Title>  
+          <Title>{props.title}</Title>
         </Row>
         <Content>{props.content}</Content>
       </Card>
     </Container>
-  )
+  );
 }
 
-export default ServiceCard
+export default ServiceCard;

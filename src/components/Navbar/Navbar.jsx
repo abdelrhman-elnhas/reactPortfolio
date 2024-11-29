@@ -13,7 +13,7 @@ function Navbar() {
       <Container>
         <Links>
           <LinkR style={nodecoration} smooth={+true} to="/">
-            <Logo src="./images/Logo.png" />
+            <Logo src="./images/Logo.png" alt="AE Logo" />
           </LinkR>
           <Link>
             <LinkR style={nodecoration} smooth={+true} to="/">
