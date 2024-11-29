@@ -17,18 +17,21 @@ function Services() {
           <ServiceCard
             image="./images/data.png"
             alt="Web Development Icon"
+            loading="lazy"
             title={["Web", "\n", "Development"]}
             content="I like to code things from scratch , and enjoy bringing ideas to life in the browser."
           />
           <ServiceCard
             image="./images/website.png"
             alt="UI/UX Design Icon"
+            loading="lazy"
             title={["UI / UX", "\n", "Design"]}
             content="I value Simple Content structure , artistic deisgns and awesome interactions."
           />
           <ServiceCard
             image="./images/vector.png"
             alt="Graphic Design Icon"
+            loading="lazy"
             title={["Graphic", "\n", "Design"]}
             content="Art is a problem , design is the solution to it, and I like solving problems."
           />

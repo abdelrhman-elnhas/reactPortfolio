@@ -52,6 +52,7 @@ const Portfolio = React.forwardRef((props, portfolioref) => {
               ref={projectImage}
               src={`./images/Proj39.jpg`}
               alt="Project Image"
+              loading="lazy"
             />
           </Screen>
         </LeftSide>

@@ -51,6 +51,7 @@ function Hero({ scrollToContact, scrollToPortfolio }) {
           <Photo
             src="./images/PersonalPhoto2.png"
             alt="Abdelrhman Elnhas Photo"
+            loading="lazy"
           />
         </HeroImage>
         <SocialMedia>

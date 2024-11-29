@@ -17,7 +17,7 @@ function Footer() {
         <Copyright>
           copyrights &copy; 2023. All rights reserved by{" "}
           <span>
-            <Logo src="./images/LogoC.png" alt="AE Logo" />
+            <Logo src="./images/LogoC.png" alt="AE Logo" loading="lazy" />
           </span>
         </Copyright>
       </Container>
