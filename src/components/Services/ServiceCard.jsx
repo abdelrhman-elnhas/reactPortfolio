@@ -14,7 +14,7 @@ function ServiceCard(props) {
       <Card>
         <Row>
           <LogoBlock>
-            <Logo src={props.image} alt={props.alt} />
+            <Logo src={props.image} alt={props.alt} loading="lazy" />
           </LogoBlock>
           <Title>{props.title}</Title>
         </Row>
