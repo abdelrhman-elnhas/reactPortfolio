@@ -15,8 +15,8 @@ function MidSection() {
       <Container>
         <Title>Have Any Projects in mind?</Title>
         <Desc>
-          Let's build a project together , I'm always honoured to work with
-          great people.
+          Let's build a project together , I'm always honored to work with great
+          people.
         </Desc>
         <ButtonGroup>
           <Link

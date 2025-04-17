@@ -16,12 +16,15 @@ function About() {
         <AboutContent>
           <Title>&lt; About &gt;</Title>
           <Desc>
-            <Name>Hi There! I'm Abdelrhman Elnhas.</Name> I’m a passionate
-            Software Engineer with a specialization in Frontend Development.
-            Technology, programming, and design are at the heart of everything I
-            do. I thrive on transforming ideas into seamless, user-friendly
-            experiences. Here, you’ll find a showcase of my skills and
-            expertise.
+            <Name>Hi There! I'm Abdelrhman Elnhas.</Name> I'm a{" "}
+            <b>Frontend Software Engineer</b> with <b>2+ years </b> of
+            experience in crafting engaging, interactive user interfaces using
+            <b>Vanilla JavaScript and React JS.</b> With a strong foundation in
+            <b>Graphic Design and UI/UX Design</b>, blending creativity with
+            technical proficiency. Proficient in core <b>Backend Development</b>
+            concepts, offering a holistic understanding of the project
+            lifecycle. A dedicated professional with a profound passion for
+            technology and a commitment to programming excellence.
           </Desc>
         </AboutContent>
         <AboutBars>
