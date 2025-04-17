@@ -25,8 +25,9 @@ function About() {
           </Desc>
         </AboutContent>
         <AboutBars>
-          <ProgressBar skill="React" rate="75%" />
+          <ProgressBar skill="React" rate="85%" />
           <ProgressBar skill="Javascript" rate="80%" />
+          <ProgressBar skill="Typescript" rate="60%" />
           <ProgressBar skill="Redux Toolkit" rate="70%" />
           <ProgressBar skill="Tailwind" rate="70%" />
           <ProgressBar skill="Bootstrap" rate="90%" />
