@@ -1,7 +1,5 @@
 import { styled } from "styled-components";
 
-
-
 export const Section = styled.div`
   display: flex;
   justify-content: center;
@@ -11,8 +9,7 @@ export const Section = styled.div`
   -o-user-select: none;
   user-select: none;
   margin-top: 20px;
-
-`
+`;
 
 export const Container = styled.div`
   width: 100%;
@@ -28,14 +25,14 @@ export const Container = styled.div`
     align-items: center;
     justify-content: space-between;
   }
-`
+`;
 
 export const AboutContent = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;
   justify-content: center;
-`
+`;
 
 export const AboutBars = styled.div`
   display: flex;
@@ -43,10 +40,10 @@ export const AboutBars = styled.div`
   flex: 1;
   padding: 0px 30px;
   width: 100%;
-`
+`;
 
 export const Title = styled.div`
-  color: ${props => props.theme.thirdColor};
+  color: ${(props) => props.theme.thirdColor};
   font-size: 40px;
   margin-bottom: 20px;
 
@@ -54,9 +51,9 @@ export const Title = styled.div`
     font-size: 30px;
     margin-bottom: 10px;
   }
-`
+`;
 export const Name = styled.div`
-  color: ${props => props.theme.thirdColor};
+  color: ${(props) => props.theme.thirdColor};
   font-size: 30px;
 
   @media (max-width: 768px) {
@@ -65,12 +62,11 @@ export const Name = styled.div`
   @media (max-width: 576px) {
     font-size: 20px;
   }
-`
-
+`;
 
 export const Desc = styled.div`
-  color: ${props => props.theme.fourthColor};
-  font-size: 30px;
+  color: ${(props) => props.theme.fourthColor};
+  font-size: 26px;
 
   @media (max-width: 996px) {
     margin-bottom: 30px;
@@ -84,5 +80,4 @@ export const Desc = styled.div`
     font-size: 15px;
     margin-bottom: 30px;
   }
-`
-
+`;
