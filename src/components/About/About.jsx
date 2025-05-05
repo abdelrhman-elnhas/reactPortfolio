@@ -39,7 +39,7 @@ function About() {
           <ProgressBar skill="Laravel" rate="50%" />
           <ProgressBar skill="MySQL" rate="75%" />
           <ProgressBar skill="Photoshop & Illustrator" rate="80%" />
-          <ProgressBar skill="XD &Figma" rate="70%" />
+          <ProgressBar skill="XD &Figma" rate="80%" />
         </AboutBars>
       </Container>
     </Section>

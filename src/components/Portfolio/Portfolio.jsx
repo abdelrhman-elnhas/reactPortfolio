@@ -76,7 +76,7 @@ const Portfolio = React.forwardRef((props, portfolioref) => {
           </BarGroup>
         </RightSide>
       </Container>
-      <Update>Last Update On March 2025</Update>
+      <Update>Last Update On May 2025</Update>
     </Section>
   );
 });
