@@ -64,10 +64,7 @@ function Hero({ scrollToContact, scrollToPortfolio }) {
               </Anchor>
             </ListItem>
             <ListItem>
-              <Anchor
-                href="https://www.behance.net/aedesigns11"
-                target="_blank"
-              >
+              <Anchor href="https://www.behance.net/_ae_studio" target="_blank">
                 <FontAwesomeIcon
                   className="icon"
                   icon={faSquareBehance}
@@ -97,10 +94,7 @@ function Hero({ scrollToContact, scrollToPortfolio }) {
               </Anchor>
             </ListItem>
             <ListItem>
-              <Anchor
-                href="https://www.facebook.com/abdelrhman.elnhas"
-                target="_blank"
-              >
+              <Anchor href="https://wa.me/+201127698622" target="_blank">
                 <FontAwesomeIcon
                   className="icon"
                   icon={faSquareFacebook}
