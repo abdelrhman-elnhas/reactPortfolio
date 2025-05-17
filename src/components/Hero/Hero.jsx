@@ -20,7 +20,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faLinkedin,
   faSquareBehance,
-  faSquareFacebook,
+  faSquareWhatsapp,
   faSquareGithub,
   faSquareXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
@@ -97,9 +97,9 @@ function Hero({ scrollToContact, scrollToPortfolio }) {
               <Anchor href="https://wa.me/+201127698622" target="_blank">
                 <FontAwesomeIcon
                   className="icon"
-                  icon={faSquareFacebook}
+                  icon={faSquareWhatsapp}
                   size="xl"
-                />
+                />{" "}
               </Anchor>
             </ListItem>
           </List>
