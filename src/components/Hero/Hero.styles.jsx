@@ -310,6 +310,7 @@ export const HeroImage = styled.div`
 `;
 export const Photo = styled.img`
   width: 100%;
+
   -moz-user-select: -moz-none;
   -khtml-user-select: none;
   -webkit-user-select: none;
@@ -328,7 +329,8 @@ export const Photo = styled.img`
   }
 
   &:hover {
-    scale: 1.01;
+    scale: 1.03;
+    transform: rotateZ(1deg);
   }
 `;
 

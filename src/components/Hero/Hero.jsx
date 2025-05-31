@@ -48,10 +48,7 @@ function Hero({ scrollToContact, scrollToPortfolio }) {
           </ButtonGroup>
         </HeroContent>
         <HeroImage>
-          <Photo
-            src="./images/PersonalPhoto2.png"
-            alt="Abdelrhman Elnhas Photo"
-          />
+          <Photo src="./images/photo1.png" alt="Abdelrhman Elnhas Photo" />
         </HeroImage>
         <SocialMedia>
           <List>
