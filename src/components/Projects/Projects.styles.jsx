@@ -55,6 +55,7 @@ export const FilterButton = styled.button`
   border: 3px solid ${(props) => props.theme.thirdColor};
   margin-left: 10px;
   margin-bottom: 20px;
+  cursor: pointer;
 
   &:active {
     color: ${(props) => props.theme.thirdColor};

@@ -29,7 +29,7 @@ const Portfolio = React.forwardRef((props, portfolioref) => {
 
   const [projects, setProjects] = useState([]);
 
-  const url = "https://cropcopter.net/api/get/all";
+  const url = "https://darkgrey-jackal-710111.hostingersite.com/api/get/all";
 
   useEffect(() => {
     fetch(url)
@@ -76,7 +76,7 @@ const Portfolio = React.forwardRef((props, portfolioref) => {
           </BarGroup>
         </RightSide>
       </Container>
-      <Update>Last Update On May 2025</Update>
+      <Update>Last Update On July 2025</Update>
     </Section>
   );
 });

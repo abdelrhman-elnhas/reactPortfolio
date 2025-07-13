@@ -16,7 +16,7 @@ function Projects() {
 
   // Function to fetch All Projects
   async function getAllProjects() {
-    await fetch("https://cropcopter.net/api/get/all")
+    await fetch("https://darkgrey-jackal-710111.hostingersite.com/api/get/all")
       .then((res) => res.json())
       .then((data) => {
         setProjects(data);
@@ -25,7 +25,9 @@ function Projects() {
   }
   // Function fetches projects by category
   function getProjectByCategory(category) {
-    fetch(`https://cropcopter.net/api/get/${category}`)
+    fetch(
+      `https://darkgrey-jackal-710111.hostingersite.com/api/get/${category}`
+    )
       .then((res) => res.json())
       .then((data) => {
         setProjects(

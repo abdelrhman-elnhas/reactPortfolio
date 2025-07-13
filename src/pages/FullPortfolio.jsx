@@ -10,15 +10,12 @@ function FullPortfolio() {
   return (
     <>
       <Helmet>
-        <title>AE | Projects</title>
+        <title>Projects | Abdelrhman Elnhas – Frontend Developer</title>
         <meta
           name="description"
-          content="Explore my journey as a Frontend Software Developer. See projects that demonstrate creativity, technical expertise, and modern web development skills."
+          content="Browse featured projects by Abdelrhman Elnhas — showing frontend development, design thinking, and UI/UX skills in action."
         />
-        <link
-          rel="canonical"
-          href="https://abdelrhman-elnhas.vercel.app/projects"
-        />
+        <link rel="canonical" href="https://abdelrhman-elnhas.com/projects" />
       </Helmet>
 
       <ThemeProvider theme={AEtheme}>

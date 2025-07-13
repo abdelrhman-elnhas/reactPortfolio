@@ -27,12 +27,12 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>AE | Abdelrhman Elnhas Portfolio</title>
+        <title>Abdelrhman Elnhas | Frontend Developer Portfolio</title>
         <meta
           name="description"
-          content="Abdelrhman Elnhas is a passionate Frontend Software Developer specializing in modern web technologies, UI/UX design, and Graphic Design."
+          content="Abdelrhman Elnhas is a passionate Frontend Developer and UI/UX Designer building modern, responsive web applications."
         />
-        <link rel="canonical" href="https://abdelrhman-elnhas.vercel.app" />
+        <link rel="canonical" href="https://abdelrhman-elnhas.com/" />
       </Helmet>
 
       <ThemeProvider theme={AEtheme}>
