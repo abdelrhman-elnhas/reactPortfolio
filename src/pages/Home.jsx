@@ -33,6 +33,28 @@ const Home = () => {
           content="Abdelrhman Elnhas is a passionate Frontend Developer and UI/UX Designer building modern, responsive web applications."
         />
         <link rel="canonical" href="https://abdelrhman-elnhas.com/" />
+
+        <script type="application/ld+json">
+          {`
+						{
+							"@context": "https://schema.org",
+							"@type": "Person",
+							"name": "Abdelrhman A. Elnhas",
+							"alternateName": "عبدالرحمن النحاس",
+							"url": "https://abdelrhman-elnhas.com",
+							"sameAs": [
+								"https://www.instagram.com/abdelrhman_elnhas",
+								"https://www.linkedin.com/in/abdelrhman-elnahas/",
+								"https://github.com/AbdelrhmanElnhas"
+							],
+							"jobTitle": "Frontend Developer",
+							"worksFor": {
+								"@type": "Organization",
+								"name": "AE Studio"
+							}
+						}
+					`}
+        </script>
       </Helmet>
 
       <ThemeProvider theme={AEtheme}>
