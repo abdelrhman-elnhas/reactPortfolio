@@ -15,7 +15,7 @@ function Footer() {
           Designed & Developed by <Name>Abdelrhman A. Elnhas</Name>
         </Text>
         <Copyright>
-          copyrights &copy; 2023. All rights reserved by{" "}
+          copyrights &copy;{new Date().getFullYear()}. All rights reserved by{" "}
           <span>
             <Logo src="./images/LogoC.png" alt="AE Logo" loading="lazy" />
           </span>

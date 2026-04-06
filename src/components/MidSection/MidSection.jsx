@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import CV from "../../Files/AbdelrhmanAhmedElnhas2025.pdf";
+import CV from "../../Files/AbdelrhmanElnhasCV2026.pdf";
 import {
   Section,
   Container,

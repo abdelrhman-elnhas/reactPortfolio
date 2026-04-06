@@ -76,7 +76,9 @@ const Portfolio = React.forwardRef((props, portfolioref) => {
           </BarGroup>
         </RightSide>
       </Container>
-      <Update>Last Update On December 2025</Update>
+      <Update>
+        Last Update On {new Date().toLocaleString("default", { month: "long", year: "numeric" })}
+      </Update>
     </Section>
   );
 });
